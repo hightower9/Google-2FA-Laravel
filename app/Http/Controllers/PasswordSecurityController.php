@@ -27,7 +27,7 @@ class PasswordSecurityController extends Controller
             $google2fa = app('pragmarx.google2fa');
             $google2fa->setAllowInsecureCallToGoogleApis(true);
             $google2fa_url = $google2fa->getQRCodeGoogleUrl(
-                '5Balloons 2FA DEMO',
+                'Laravel',
                 $user->email,
                 $user->passwordSecurity->google2fa_secret
             );
