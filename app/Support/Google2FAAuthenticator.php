@@ -9,7 +9,6 @@ class Google2FAAuthenticator extends Authenticator
     protected function canPassWithoutCheckingOTP()
     {   
         $check = $this->getUser()->passwordSecurity();
-        // print_r($check);
         $check1 = $check->count();
         if(!$check1)
             return true;
